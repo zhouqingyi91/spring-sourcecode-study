@@ -1,9 +1,6 @@
 package com.luffy.springmvcspringboot.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author: zqy
@@ -14,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @GetMapping("hello")
-    public String getHello(Integer age) {
+    public String getHello(@RequestParam("hey") Integer age) {
         return "Hello world " + "age: " + age;
     }
 
